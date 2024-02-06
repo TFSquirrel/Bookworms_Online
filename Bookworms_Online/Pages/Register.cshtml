@@ -1,0 +1,84 @@
+﻿@page
+@model Bookworms_Online.Pages.RegisterModel
+@{
+}
+
+<div class="container mt-5">
+
+    <div class="row justify-content-center align-items-center">
+
+        <div class="col-sm-12 col-md-12 col-lg-4">
+            <h1 class="mb-3">Register </h1>
+
+            <form method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="All" class="text-danger"></div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="RModel.FirstName">First Name</label>
+                    <input type="Text" asp-for="RModel.FirstName" class="form-control" />
+                    <span asp-validaton-for="RModel.FirstName" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="RModel.LastName">Last Name</label>
+                    <input type="Text" asp-for="RModel.LastName" class="form-control" />
+                    <span asp-validaton-for="RModel.LastName" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="RModel.MobileNo">Mobile No</label>
+                    <input type="number" asp-for="RModel.MobileNo" class="form-control" />
+                    <span asp-validaton-for="RModel.MobileNo" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="RModel.CreditCard">Credit Card</label>
+                    <input type="text" asp-for="RModel.CreditCard" class="form-control" />
+                    <span asp-validaton-for="RModel.CreditCard" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="RModel.Billing">Billing Address</label>
+                    <input type="Text" asp-for="RModel.Billing" class="form-control custom-textbox" />
+                    <span asp-validaton-for="RModel.Billing" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="RModel.Shipping">Shipping Address</label>
+                    <input type="Text" asp-for="RModel.Shipping" class="form-control custom-textbox" />
+                    <span asp-validaton-for="RModel.Shipping" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="RModel.Email">Email Address</label>
+                    <input type="email" asp-for="RModel.Email" class="form-control" />
+                    <span asp-validaton-for="RModel.Email" class="text-danger"></span>
+                </div>
+
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="RModel.Password">Password</label>
+                    <input type="password" asp-for="RModel.Password" class="form-control" onkeyup=""/>
+                    <span asp-validaton-for="RModel.Password" class="text-danger"></span>
+                    <p class="strength" style="display: none">strength</p>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="RModel.ConfirmPassword">Confirm Password</label>
+                    <input type="password" asp-for="RModel.ConfirmPassword" class="form-control" />
+                    <span asp-validaton-for="RModel.ConfirmPassword" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" asp-for="RModel.File">File</label>
+                    <input type="file" asp-for="RModel.File" class="form-control" />
+                    <span asp-validation-for="RModel.File" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
